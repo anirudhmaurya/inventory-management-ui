@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Inventory Management System</h1>
+    </header>
+    <nav class="tabs">
+        <button class="tab-button active" data-tab="home">Home</button>
+        <button class="tab-button" data-tab="products">Products</button>
+        <button class="tab-button" data-tab="orders">Orders</button>
+        <button class="tab-button" data-tab="suppliers">Suppliers</button>
+        <button class="tab-button" data-tab="stocks">Stocks</button>
+    </nav>
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="tab-content active">
+            <h2>Welcome to the Inventory Management System</h2>
+            <p>This is an inventory management system where you can perform the following operations:</p>
+            <ul>
+                <li>View, add, and manage products.</li>
+                <li>View and manage orders.</li>
+                <li>View and manage suppliers.</li>
+                <li>Check stock levels.</li>
+            </ul>
+        </section>
+
+        <!-- Products Section -->
+        <section id="products" class="tab-content">
+            <div class="action-row">
+                <button class="action-button" id="addProductButton">Add Product</button>
+            </div>
+            <table class="table" id="productTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Category</th>
+                        <th>Price</th>
+                        <th>Stock Quantity</th>
+                        <th>Supplier</th>
+                    </tr>
+                </thead>
+                <tbody id="productTableBody"></tbody>
+            </table>
+        </section>
+
+        <!-- Add Product Section -->
+        <section id="addProduct" class="tab-content">
+            <h2>Add Product</h2>
+            <form id="addProductForm">
+                <label for="productName">Name:</label>
+                <input type="text" id="productName" name="name" required><br>
+
+                <label for="productDescription">Description:</label>
+                <textarea id="productDescription" name="description" required></textarea><br>
+
+                <label for="productCategory">Category:</label>
+                <input type="text" id="productCategory" name="category" required><br>
+
+                <label for="productPrice">Price:</label>
+                <input type="number" step="0.01" id="productPrice" name="price" required><br>
+
+                <label for="productStock">Stock Quantity:</label>
+                <input type="number" id="productStock" name="stock_quantity" required><br>
+
+                <label for="productSupplier">Supplier ID:</label>
+                <input type="number" id="productSupplier" name="supplier" required><br>
+
+                <button type="submit" class="action-button">Add</button>
+                <button type="button" class="action-button" id="backToProducts">Back</button>
+            </form>
+        </section>
+
+        <!-- Orders Section -->
+        <section id="orders" class="tab-content">
+            <div class="action-row">
+                <button class="action-button" id="addOrderButton">Add Order</button>
+            </div>
+            <table class="table" id="orderTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Quantity</th>
+                        <th>Total Price</th>
+                        <th>Sale Date</th>
+                        <th>Status</th>
+                        <th>Product</th>
+                    </tr>
+                </thead>
+                <tbody id="orderTableBody"></tbody>
+            </table>
+        </section>
+
+        <!-- Add Order Section -->
+        <section id="addOrder" class="tab-content">
+            <h2>Add Order</h2>
+            <form id="addOrderForm">
+                <label for="orderProduct">Product ID:</label>
+                <input type="number" id="orderProduct" name="product" required><br>
+
+                <label for="orderQuantity">Quantity:</label>
+                <input type="number" id="orderQuantity" name="quantity" required><br>
+
+                <label for="orderStatus">Status:</label>
+                <input type="text" id="orderStatus" name="status" required><br>
+
+                <button type="submit" class="action-button">Add</button>
+                <button type="button" class="action-button" id="backToOrders">Back</button>
+            </form>
+        </section>
+
+        <!-- Suppliers Section -->
+        <section id="suppliers" class="tab-content">
+            <div class="action-row">
+                <button class="action-button" id="addSupplierButton">Add Supplier</button>
+            </div>
+            <table class="table" id="supplierTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Address</th>
+                    </tr>
+                </thead>
+                <tbody id="supplierTableBody"></tbody>
+            </table>
+        </section>
+
+        <!-- Add Supplier Section -->
+        <section id="addSupplier" class="tab-content">
+            <h2>Add Supplier</h2>
+            <form id="addSupplierForm">
+                <label for="supplierName">Name:</label>
+                <input type="text" id="supplierName" name="name" required><br>
+
+                <label for="supplierEmail">Email:</label>
+                <input type="email" id="supplierEmail" name="email" required><br>
+
+                <label for="supplierPhone">Phone:</label>
+                <input type="text" id="supplierPhone" name="phone" required><br>
+
+                <label for="supplierAddress">Address:</label>
+                <textarea id="supplierAddress" name="address" required></textarea><br>
+
+                <button type="submit" class="action-button">Add</button>
+                <button type="button" class="action-button" id="backToSuppliers">Back</button>
+            </form>
+        </section>
+
+        <!-- Stocks Section -->
+        <section id="stocks" class="tab-content">
+            <table class="table" id="stockTable">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Stock Quantity</th>
+                    </tr>
+                </thead>
+                <tbody id="stockTableBody"></tbody>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Inventory Management System</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>

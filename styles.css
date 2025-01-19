@@ -1,0 +1,197 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background: linear-gradient(to right, #007bff, #6c757d);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+footer {
+    background: linear-gradient(to right, #6c757d, #007bff);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    background-color: #f8f9fa;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.tab-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.tab-button:hover, .tab-button.active {
+    background-color: #0056b3;
+}
+
+.action-row {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.action-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.action-button:hover {
+    background-color: #0056b3;
+}
+
+.main {
+    padding: 20px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.table th, .table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+    word-wrap: break-word;
+}
+
+.table th {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Tab Content */
+.tab-content {
+    display: none;
+    padding: 20px;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Table Overflow Handling */
+.table-container {
+    overflow-x: auto;
+}
+
+/* General Form Styling */
+form {
+    margin: 20px auto;
+    max-width: 500px;
+    padding: 20px 20px; /* Consistent padding */
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 1.5em;
+}
+
+/* Centering Add and Back Buttons */
+form button {
+    width: 200px; /* Fixed button width for consistency */
+    padding: 10px;
+    margin: 10px auto; /* Centering buttons */
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+form button.action-button:last-child {
+    background-color: #6c757d;
+}
+
+form button.action-button:last-child:hover {
+    background-color: #5a6268;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+form input, 
+form textarea {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    transition: border-color 0.3s ease;
+}
+
+form input:focus, 
+form textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+h2 {
+    text-align: center;
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    font-size: 1.8em;
+}
+
