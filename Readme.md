@@ -13,7 +13,7 @@ This is the frontend implementation for the Inventory Management System, designe
 
 ### Live Demo
 The frontend is deployed using GitHub Pages and can be accessed at the following URL:  
-[**Inventory Management UI**](https://anirudhmaurya.github.io/inventory-management--ui/)
+[**Inventory Management UI**](https://anirudhmaurya.github.io/inventory-management-ui/)
 
 ### Note
 - The backend services are hosted on a free tier of Render, which sleeps after 15 minutes of inactivity. It may take some time to respond initially while the server reboots.
